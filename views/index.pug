@@ -1,0 +1,41 @@
+extends layout
+
+block content
+    h1= title
+    div.row
+        p.lead &nbsp;&nbsp; This is a minimal open source API build using Express framework for Node.js . &nbsp;
+            a.btn-sm.btn-secondary.btn(target='_blank', href='https://vishnusayanth.github.io/')  Developer
+            b &nbsp;
+            a.btn-sm.btn-secondary.btn(target='_blank', href='https://vishnusayanth-react-app.netlify.app')  Front-end
+            b &nbsp;
+            a.btn-sm.btn-secondary.btn(target='_blank', href='https://github.com/vishnusayanth/express-app')  Source code
+    hr.my-4
+    p.lead
+        b REST API endpoints are given below.
+    div
+        div.card
+            div.card-header
+                b http://vishnusayanth-express-app.herokuapp.com/movies/
+            div.card-body
+                h4.card-title Sample Response
+                p [
+                p &nbsp;&nbsp; {id: 2, name: "The Shawshank Redemption"},
+                p &nbsp;&nbsp; {id: 3, name: "The Godfather"},
+                p &nbsp;&nbsp; {id: 4, name: "The Godfather: Part II"},
+                p &nbsp;&nbsp; {id: 5, name: "12 Angry Men"}
+                p ]
+    p
+    div
+        div.card
+            div.card-header
+                b http://vishnusayanth-express-app.herokuapp.com/movie/{movieId}
+            div.card-body
+                h4.card-title Sample Response (get {movieId} from '/movies/' response)
+                p {
+                p &nbsp;&nbsp; "id": {movieId},
+                p &nbsp;&nbsp; "movie_name": "Pulp Fiction",
+                p &nbsp;&nbsp; "imdb_rating": 8.9,
+                p &nbsp;&nbsp; "genre_name": "Drama",
+                p &nbsp;&nbsp; "director_name": "Quentin Tarantino"
+                p }
+    p
